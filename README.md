@@ -1,8 +1,11 @@
-# How-to-Improve-Flood-Protection
+# RiverCiliwung
+![](figs/ciliwung%20map.jpg)
+
+Contributors: Nico Septianus, Onno Bokhove
 
 Instruction for the code:
 
-1.) The data and the code is inside Ciliwung data.xslm -> inside All Codes folder.
+1.) The data and the code is inside Ciliwungcode1.xslm
 
 2.) Open the developer tab and open visual basic.
 
@@ -22,66 +25,49 @@ FEV -> FEV-ht and 2-meter deep square - ht graph.
 
 ratingcurve -> only the rating curve graph.
 
-p.s. : After you call the function. you need to delete the existing graph before run the function again. Since the nickname ofthe graph already exist. Unless, you change the nickname of the graph in the code. (I add -readertest to show the graph is call by you)
+PS: After you call the function, you need to delete the existing graph before run the function again, since the nickname of the graph already exist, unless you change the nickname of the graph in the code. Added is -readertest to show that the graph is call by you.
 
-Test River: Don, Aire and Thames River
 
-08/06 Try plot simple graph in VBA excel.
+## TBD: FEV analysis using VBA/Excel for 2020 flood of River Ciliwung (Djakarta, Indonesia)
 
-12/06 Tried to reproduce python plot for every river in one python code (Don, aire, Caldron, Thames) + upload the result for thames river
+Work published as: 
 
-14/06 Read articles, understand equation & graph and produce latex + pdf for it.
+TBD
 
-14/06 Apply some plot between t vs h, h vs Q and Q vs t graph on Thames river.
+Ciliwung River, a provincial cross-border river that flows by passing Bogor City, Depok City and ends up in the Jakarta bay is famous for major flooding in the capital city since 20th century (Ratnaningsih et al., 2019). With the total length of 75km from Mount Pangrango(upstream) to Jakarta Bay(downstream) and total area cover of 322 km2.
 
-18/06 Put equation on excel to use.
+See also:
+* 'Using flood-excess volume to assess and communicate flood-mitigation schemes': [presentation](http://www1.maths.leeds.ac.uk/~amttk/files/leedskyoto.pdf) and [poster](http://www1.maths.leeds.ac.uk/~amttk/files/INI_sept2018.pdf). 
 
-20/06 Tried produce 3 panel graph in excel
+### Graphical output 
 
-21/06 Put the dashed line for (Qt,Qm,hm,ht) in vba
+#### Data analysis: from depth to discharge to FEV
 
-22/06 insert the shaded area for FEV in excel
+From the ```/code``` dir, run: 
+ * ```Ciliwungcode1.xlsm```  
+ 
+The Excel/VBA script completes the FEV analysis and calls four plotting routines:
+ * ```equation2()```
+ * ```shadedarea()``` 
+ * ```ratingcurve()``` 
+ * ```FEV()``` 
 
-23/06 write down the maths equation and understand the error rate
+in total, 4 figures are produced, including an adaptation of Three-panel Graph:
 
-26/06 try come up with some mitigation plan
+![](figs/Ciliwungfinalplot.png)
 
-28/06 find the cost and improve more mitigation scheme
+*Caption: Quadrant plot for early 2020 new year flood of the River Ciliwung at Depok Floodgate.
+The plot shows 3-panel graph between relationship of time vs height (original data), height
+vs flowrate (rating curve), time vs flowrate (hydrograph).*
 
-30/06 make FEV-ht graph
+#### Cost-effectiveness analysis
 
-3/07 make the 1st mitigation scenario box
+Run ```mitigation()``` to produce mitigation analysis:
 
-5/07 make the 2nd mitigation scenario box
+![](figs/mitigation1.png)
 
-12/07 read some paper related to the proposed mitigation (Ciawi and Sukamahi Dam)
+*Caption: First flood mitigation scenario that mitigates 96% of the FEV in the worst and 100% at the best. Technically, Ciawi and Sukamahi Dam are specifically to mitigate excess water which came from upstream and the remaining scheme (higher walls, planting trees, floodways) are to mitigate the excess water near downstream.*
 
-15/07 Understand the hydraulics mathematics for the dam scenario
+![](figs/mitigation2.png)
 
-24/07 Start making the presentation
-
-26/07 Write the short report
-
-27/07 Update the presentation add more slides and practice for the presentation
-
-29/07 Rework on the FEV graph with error bar and better visualisation
-
-30/07 add the upper and lower limit for the FEV graph
-
-9/08 Start write the report introduction
-
-11/08 Start write the maths in the report
-
-15/08 write the history of the Jakarta flood
-
-19/08 write introduction of the FEV analysis part
-
-21/08 finish the Ciliwung FEV analysis
-
-1/09 add the verification part before the analysis use Don and Aire river
-
-8/09 write the discussion part
-
-10/09 finish touch to to the report (reference + appendix)
-
-13/09 Proof read and check for the report consistency
+*Caption: Second flood alternative scenario mitigates 100% of the FEV just with the floodways. Despite the low cost, however this mitigation relies heavily only on one mitigation.*
