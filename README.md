@@ -54,7 +54,7 @@ The Excel/VBA script completes the FEV analysis and calls four plotting routines
 
 in total, 4 figures are produced, including an adaptation of Three-panel Graph:
 
-![](Figures/Ciliwung%20final%20plot.png)
+![](Figures/Ciliwung%20final%20plot.PNG)
 
 *Caption: Quadrant plot for early 2020 new year flood of the River Ciliwung at Depok Floodgate.
 The plot shows 3-panel graph between relationship of time vs height (original data), height
@@ -64,10 +64,10 @@ vs flowrate (rating curve), time vs flowrate (hydrograph).*
 
 Run ```mitigation()``` to produce mitigation analysis:
 
-![](Figures/mitigation%201.png)
+![](Figures/mitigation%201.PNG)
 
 *Caption: First flood mitigation scenario that mitigates 96% of the FEV in the worst and 100% at the best. Technically, Ciawi and Sukamahi Dam are specifically to mitigate excess water which came from upstream and the remaining scheme (higher walls, planting trees, floodways) are to mitigate the excess water near downstream.*
 
-![](Figures/mitigation%202.png)
+![](Figures/mitigation%202.PNG)
 
 *Caption: Second flood alternative scenario mitigates 100% of the FEV just with the floodways. Despite the low cost, however this mitigation relies heavily only on one mitigation.*
